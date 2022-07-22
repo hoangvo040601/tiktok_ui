@@ -3,14 +3,33 @@ import classNames from 'classnames/bind';
 import Tippy from '@tippyjs/react/headless';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './Header.module.scss';
-import { faCircleXmark, faSpinner, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faCircleXmark, faSpinner, faMagnifyingGlass, faEllipsisVertical,faEarthAsia,faCircleQuestion,faKeyboard } from '@fortawesome/free-solid-svg-icons';
 
 import images from '../../../../assets/images';
 import { Wrapper as PopperWrapper } from '../../../Popper';
 import AccountItem from '../../../AccountItem';
 import Button from '../../../Button';
+import Menu from '../../../Popper/Menu'
 
 const cx = classNames.bind(styles);
+
+
+const MENU_ITEMS = [
+    {
+        icon: <FontAwesomeIcon icon={faEarthAsia}/>,
+        title: 'English'
+    },
+    {
+        icon: <FontAwesomeIcon icon={faCircleQuestion}/>,
+        title: 'Feedback and Help',
+        to:'/feedback'
+    },
+    {
+        icon: <FontAwesomeIcon icon={faKeyboard}/>,
+        title: 'Keyboard shortcuts'
+    }
+]
+
 function Header() {
     const [searchResult, setSearchResult] = useState([]);
     useEffect(() => {
@@ -56,6 +75,13 @@ function Header() {
                     <Button primary target="_blank" className={cx('custom-login')}>
                         Log in
                     </Button>
+                    <Menu
+                        items={MENU_ITEMS}
+                    >
+                        <button className={cx('more-btn')}>
+                            <FontAwesomeIcon icon={faEllipsisVertical} />
+                        </button>
+                    </Menu>
                 </div>
             </div>
         </header>
