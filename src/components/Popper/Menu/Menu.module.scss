@@ -1,22 +1,47 @@
-.menu-list{
+.menu-list {
     width: 230px;
-    padding:4px 8px;
+    padding: 4px 8px;
     display: flex;
 
-    .menu-item{
+    .menu-item {
         margin-left: 0px;
         display: flex;
-        font-size:1.4rem;
+        font-size: 1.4rem;
         width: 100%;
-        border-radius:0;
-        font-weight:500;
+        border-radius: 0;
+        font-weight: 500;
+        line-height: 2.2rem;
 
-        &:hover{
-            background-color:#f1f1f2;
+        &:hover {
+            background-color: #f1f1f2;
         }
     }
 }
 
-.menu-wrapper{
+.menu-wrapper {
     padding-bottom: 8px;
+}
+
+.header {
+    position: relative;
+    height: 50px;
+    margin-top: -8px;
+}
+
+.back-btn {
+    width: 50px;
+    height: 100%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.header-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.setparate{
+    border-top: 1px solid rgba(22, 24, 35, 0.12)
 }

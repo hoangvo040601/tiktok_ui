@@ -10,6 +10,7 @@
     // defautl Layout
     --default-layout-header-height: 60px;
     --default-layout-width: 1150px;
+    --default-layout-holizontal-spacer: 24px;
 }
 
 * {
@@ -26,6 +27,19 @@ html {
 body {
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 1.6rem;
+
+    .tippy-box {
+        background-color: rgba(84, 84, 84, 0.92);
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+    }
+    .tippy-arrow {
+        color: rgba(84, 84, 84, 0.92);
+    }
+    .tippy-content{
+        padding:8px 9px;
+    }
 }
 
 button,
